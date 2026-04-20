@@ -1,0 +1,20 @@
+.header{
+    padding: 20px;
+    text-align: center;
+    background: #ff9100;
+    color: white; 
+    font-size: 30px;
+}
+
+.header a{ 
+    color: white; 
+    margin: 0 10px; 
+    text-decoration: none; 
+}
+
+.hatter{
+    background-image: url("https://images.pexels.com/photos/29252118/pexels-photo-29252118.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
