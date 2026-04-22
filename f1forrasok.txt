@@ -5,3 +5,5 @@ chat.openai.com
 https://www.formula1.com/en/page/what-is-f1
 https://www.chiselindustries.com/
 https://www.formula1.com/en/information/mclaren-year-by-year.6Gj22qyOorq5dpniarY3rP
+https://www.formula1.com/en/latest/article/the-beginners-guide-to-the-formula-1-weekend.5RFZzGXNhEi9AEuMXwo987
+https://www.formula1.com/en/latest/article/drivers-teams-cars-circuits-and-more-everything-you-need-to-know-about.7iQfL3Rivf1comzdqV5jwc

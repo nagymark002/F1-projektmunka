@@ -1,5 +1,6 @@
 .html{
     scroll-behavior: smooth;
+    background-color: #FAF6EF;
 }
 html, body{
     margin: 0;
@@ -8,7 +9,7 @@ html, body{
 .section1{
     height: 100vh;
     justify-content: center;
-    background-image: url("kepek/kezdolap.hattere.jpg");
+    background-image: url("kezdolap.hattere.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -21,12 +22,12 @@ html, body{
     height: 200px;
     width: auto;
     display: block;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    transition: transform 0.5s ease, text-shadow 0.5s ease-in-out;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    transition: transform 0.2s ease, text-shadow 0.2s ease-in-out;
 }
 .focim1:hover img{
-    transform: scale(1.01);
+    transform: scale(1.02);
     filter: drop-shadow(0 2px 10px #ff000080);
 }
 .focim2{
@@ -37,7 +38,7 @@ html, body{
     margin: 0;
     font-size: 2rem;
     display: block;
-    transition: transform 0.5s ease, text-shadow 0.5s ease-in-out;
+    transition: transform 0.2s ease, text-shadow 0.2s ease-in-out;
 }
 .focim2 img{
     height: 50px;
@@ -59,11 +60,11 @@ html, body{
     font-size: 30px;
     position: sticky;
     top: 0;
-    background-color: #efe1ca;
+    background-color: #1e1e2e;
     z-index: 1000;
 }
 .menu1 a{ 
-    color: rgb(192, 165, 118);
+    color: white;
     margin-right: 20px;
     margin-left: 20px;  
     text-align: right;
@@ -71,14 +72,14 @@ html, body{
     font-size: 20px;
     text-decoration: none;
     display: inline-block;
-    transition: transform 0.5s ease, text-shadow 0.5s ease-in-out;
+    transition: transform 0.2s ease, text-shadow 0.2s ease-in-out;
 }
 .menu1 a:hover{
     transform: scale(1.1);
-    text-shadow: 0 2px 10px rgba(235, 179, 179, 0.445);
+    text-shadow: 0 2px 10px rgba(255, 115, 0, 0.445);
 }
 .menu2 a{
-    color: #866d4e;
+    color: rgb(255, 246, 217);
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 10px;  
@@ -88,7 +89,7 @@ html, body{
     font-size: 20px;
     text-decoration: none;
     display: inline-block;
-    transition: transform 0.5s ease, text-shadow 0.5s ease-in-out;
+    transition: transform 0.2s ease, text-shadow 0.2s ease-in-out;
     font-weight: bold;
     justify-content: center;
     padding: 1rem 0;
@@ -115,13 +116,13 @@ html, body{
     font-size: 20px;
     letter-spacing: 1.5px;
     display: inline-block;
-    transition: transform 0.5s ease, text-shadow 0.5s ease-in-out;
+    transition: transform 0.2s ease, text-shadow 0.2s ease-in-out;
 }
 .doboz-link:hover{
     transform: scale(1.1);
 }
 .lablec{
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 10px;
     width: 100%;
@@ -131,20 +132,15 @@ html, body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .section2{
-    height: 100vh;
+    height: 95vh;
     justify-content: center;
     background-color: #FAF6EF;
-}
-.leiras{  
-    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 2rem;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    letter-spacing: 0.5px;
-    text-align: justify;
-}
-.leiras figure{
-    margin: 3rem 0;
+    padding-top: 5vh;
 }
 .kepalairas{
     padding-top: 5px;
@@ -170,7 +166,7 @@ html, body{
     height: auto;
     display: block;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }   
 .kep-doboz:hover img{
     transform: scale(1.1);
@@ -181,14 +177,92 @@ html, body{
     color: #C76E00;
     font-size: 40px;
     text-align: center;
+    letter-spacing: 0;
 }
 .alcimek{
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: orange;
+    letter-spacing: 0;
+    font-size: 40px;
+}
+.kisalcimek{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #C76E00;
+    letter-spacing: 0;
+    font-size: 35px;
+}
+.leiras{  
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.2px;
+    text-align: justify;
 }
 .leiras-szoveg{
     line-height: 30px;
     font-size: 20px;
+}
+.leiras figure{
+    margin: 3rem 0;
+}
+.kisleiras{  
+    max-width: 750px;
+    margin: 0 auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 0.2px;
+    text-align: justify;
+}
+.kisleiras figure{
+    margin: 3rem 0;
+}
+.bal-cim{
+    display: flex;
+    flex-direction: column;
+}
+.bal-nagycim{
+    font-size: 60px;
+    margin: 0;
+}
+.icipici{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #d97706;
+    margin-bottom: 10px;
+}
+.bal-szoveg{
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    max-width: 100%;
+    text-align: justify;
+    letter-spacing: 0.2px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.balkep-doboz{
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.balkep-doboz img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.balkep-doboz:hover img{
+    transform: scale(1.1);
+}
+.jobb-szoveg{
+    font-size: 20px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    max-width: 100%;
+    text-align: justify;
+    letter-spacing: 0.2px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
