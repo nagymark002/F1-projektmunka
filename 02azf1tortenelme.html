@@ -30,7 +30,7 @@
         <p class="leiras-szoveg">Már a <b>20. század elején</b> is léteztek <b>Grand Prix versenyek</b> Európában, amelyek hatalmas izgalmat keltettek. A sportot olyan legendás pilóták segítettek megalapozni, mint Tazio Nuvolari és Rudolf Caracciola. Az <b>egységes világbajnokságra</b> csak a második világháború után merült fel az igény.</p>
             
         <h1 class="alcimek">A Forma-1 születése</h1>
-        <p class="leiras-szoveg">Az első hivatalos F1-es világbajnokság <b>1950-ben</b> indult <b>Silverstone-ban</b> (Egyesült Királyság), és ezzel kezdetét vette a Forma–1 globális története. Az első igazi legenda <b>Juan Manuel Fangio</b> lett, aki öt világbajnoki címet nyert az 1950-es években. Ugyanebben az időszakban egy fontos <b>technikai váltás</b> is történt: a Cooper Car Company 1958-ban bevezette a hátsó motoros autókat, amelyek gyorsan szabvánnyá váltak.</p>
+        <p class="leiras-szoveg">Az első hivatalos F1-es világbajnokság <b>1950-ben</b> indult <b>Silverstone-ban</b> (Egyesült Királyság), és ezzel kezdetét vette a Forma-1 globális története. Az első igazi legenda <b>Juan Manuel Fangio</b> lett, aki öt világbajnoki címet nyert az 1950-es években. Ugyanebben az időszakban egy fontos <b>technikai váltás</b> is történt: a Cooper Car Company <b>1958-ban</b> bevezette a hátsó motoros autókat, amelyek gyorsan szabvánnyá váltak.</p>
                 
             <figure class="kep-sor">
                 <div class="kep-egyseg">
@@ -61,7 +61,7 @@
             </figure>
             
         <h1 class="alcimek">A modern korszak</h1>
-        <p class="leiras-szoveg">Az <b>1990-es évektől</b> a Forma-1 egyre hatalmasabbá és technológiailag fejlettebbé vált. <b>Michael Schumacher</b> a 2000-es évek elején új rekordokat felállítva dominált a Ferrarival. 2014-től pedig a sport belépett a <b>hibrid korszakba,</b> amely a hatékonyságot és a fenntarthatóságot helyezte előtérbe. Ezt a korszakot a Mercedes uralta, <b>Lewis Hamilton</b> hat világbajnokságot szerzett a csapatnak. A digitális média térnyerésének és a Netflix <i>Drive to Survive</i> című műsorának köszönhetően az F1 népszerűsége robbanásszerűen nőtt meg, új rajongókat vonzott, és új piacokra terjeszkedett.</p>
+        <p class="leiras-szoveg">Az <b>1990-es évektől</b> a Forma-1 egyre hatalmasabbá és technológiailag fejlettebbé vált. <b>Michael Schumacher</b> a <b>2000-es évek elején</b> új rekordokat felállítva dominált a Ferrarival. 2014-től pedig a sport belépett a <b>hibrid korszakba,</b> amely a hatékonyságot és a fenntarthatóságot helyezte előtérbe. Ezt a korszakot a Mercedes uralta, <b>Lewis Hamilton</b> hat világbajnokságot szerzett a csapatnak. A digitális média térnyerésének és a Netflix <i>Drive to Survive</i> című műsorának köszönhetően az F1 népszerűsége robbanásszerűen nőtt meg, új rajongókat vonzott, és új piacokra terjeszkedett.</p>
                 
             <figure class="kep-sor">
                 <div class="kep-egyseg">
@@ -74,7 +74,82 @@
 
     </div>
 
+    <section class="teszt">
+
         <h1 class="nagycim">Kérdések</h1>
+        
+        <div class="kerdes">
+            <p>Mikor indult az első világbajnokság?</p>
+            <input type="text" id="v1">
+            <span id="e1"></span>
+        </div>
+        
+        <div class="kerdes">
+            <p>Melyik cég vezette be a farmotoros járműveket?</p>
+            <input type="text" id="v2">
+            <span id="e2"></span>
+        </div>
+
+        <div class="kerdes">
+            <p>Milyen motorok jelentek meg a 70-es és 80-as évek körül?</p>
+            <input type="text" id="v3">
+            <span id="e3"></span>
+        </div>
+        
+        <div class="kerdes">
+            <p>Hányszoros világbajnok Lewis Hamilton?</p>
+            <input type="text" id="v4">
+            <span id="e4"></span>
+        </div>
+
+        <button onclick="valaszokEllenorzese()">Ellenőrzés</button>
+
+        <p id="eredmeny"></p>
+
+    </section>
+
+    <script>
+
+        function valaszokEllenorzese() {
+            const helyesValaszok = {
+                v1: ["1950", "1950-ben"],
+                v2: ["cooper car company", "a cooper car company"],
+                v3: ["turbófeltöltős", "turbófeltöltős motorok", "a turbófeltöltős motorok"],
+                v4: ["6", "hat", "hatszoros"]
+            };
+
+            let helyesDb = 0;
+
+            for (let i = 1; i <= 4; i++) {
+                const bevitel = document.getElementById("v" + i);
+                const eredmeny = document.getElementById("e" + i);
+
+                const felhasznaloValasz = bevitel.value.trim().toLowerCase();
+                const elfogadottValaszok = helyesValaszok["v" + i];
+
+                if (felhasznaloValasz === "") {
+                    eredmeny.textContent = "Nincs válasz!";
+                    eredmeny.style.color = "#FF8237";
+                    bevitel.style.backgroundColor = "#FFD3A5";
+                } 
+                else if (elfogadottValaszok.includes(felhasznaloValasz)) {
+                    eredmeny.textContent = "Helyes!";
+                    eredmeny.style.color = "#1A5836";
+                    bevitel.style.backgroundColor = "#C6EDC3";
+                    helyesDb++;
+                } 
+                else {
+                    eredmeny.textContent = "Hibás!";
+                    eredmeny.style.color = "#E6161A";
+                    bevitel.style.backgroundColor = "#FB919A";
+                }
+            }
+
+            document.getElementById("eredmeny").textContent =
+                `Eredmény: ${helyesDb} / 4`;
+        }
+
+    </script>
 
 </body>
 </html>
