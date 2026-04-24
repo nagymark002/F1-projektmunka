@@ -17,7 +17,7 @@ html, body{
 .focim1{
     grid-column: 1 / -1;
     display: flex;
-    justify-content: center;
+    justify-self: center;
 }
 .focim1 img{
     height: 150px;
@@ -27,7 +27,7 @@ html, body{
     margin-bottom: 2vh;
     transition: transform 0.2s ease, text-shadow 0.2s ease-in-out;
 }
-.focim1:hover img{
+.focim1 img:hover{
     transform: scale(1.02);
     filter: drop-shadow(0 2px 10px #ff000080);
 }
@@ -63,14 +63,14 @@ html, body{
     top: 0;
     background-color: #1b27198f;
 }
-.kisauto{
+.picilogo{
     margin: 0px;
     position: absolute;
     left: 2rem;
     margin: 0;
     display: block;
 }
-.kisauto img{
+.picilogo img{
     height: 80px;
     width: auto;
     display: block;
@@ -83,7 +83,8 @@ html, body{
     top: 0;
     background-color: #1e1e2e;
     z-index: 1000;
-}.menu1{
+}
+.menu1{
     display: flex;
     gap: 4rem;
     grid-column: 3;
